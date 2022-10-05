@@ -1,3 +1,26 @@
-body {
-  background: #000;
+.filter {
+  font-family: "Raleway", system-ui;
+  font-weight: 300;
+  font-size: 12px;
+  padding-left: 80px;
+}
+.filter__category {
+  padding-bottom: 15px;
+}
+.filter__title--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.filter__item {
+  padding-bottom: 10px;
+}
+
+.list__arrow {
+  display: inline;
+}
+.list__arrow--active {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=filter.css.map */
