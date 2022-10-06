@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/catalog.css">
+    <link rel="stylesheet" href="src/css/filter.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/normalize.css">
@@ -21,8 +22,106 @@
     </header>
     <main>
 
+        <section class="filter">
+            <div class="filter__category sizes">
+                <div class="filter__title--wrap">
+                    Розмір
+                    <img class="filter__arrow list__arrow list__arrow--active" src="img/list__arrow.svg">
+                </div>
+                
+                <ul class="filter__list">
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>32 | XXS (53)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>34 | XS (60)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>36 | S (60)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>38 | M (60)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>40 | L (60)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>42 | XL (58)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>46 | XXL (13)</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>48 | XХXL (4)</label></a></li>
+                </ul>
+            </div>
+            <div class="filter__category color">
+                <div class="filter__title--wrap">
+                    Колір
+                    <img class="filter__arrow list__arrow list__arrow--active" src="img/list__arrow.svg">
+                </div>
+                <ul class="filter__list">
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>білий</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>чорний</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>бежевий</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><spadn class="checkmark"></span>зелений</label></a></li>
+                    <li class="filter__item"><a href="#"><label><input type="checkbox"><span class="checkmark"></span>синій</label></a></li>
+                </ul>
+            </div>
+
+            <div class="filter__category season">
+                <div class="filter__title--wrap">
+                    Сезон
+                    <img class="filter__arrow list__arrow" src="img/list__arrow.svg">
+                </div>
+            </div>
+            <div class="filter__category cloth">
+                <div class="filter__title--wrap">
+                    Тканина
+                    <img class="filter__arrow list__arrow" src="img/list__arrow.svg">
+                </div>
+            </div>
+            <div class="filter__category sleeve"> 
+                <div class="filter__title--wrap">
+                    Рукав
+                    <img class="filter__arrow list__arrow" src="img/list__arrow.svg">
+                </div>
+            </div>
+        </section>
+
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer__logo">
+            <img sizes="(max-width: 768px) 132px,
+                        184px" srcset="
+                        img/etnodim-logo-main-removebg-preview-mobile.svg 132w,
+                        img/etnodim-logo-main-removebg-preview-desctop.svg 184w"
+                src="img/etnodim-logo-main-removebg-preview-desctop.svg" alt="Etnodim logo">
+        </div>
+        <div class="footer__grid grid">
+            <nav class="grid grid--nav navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#">Про нас</a></li>
+                    <li class="navigation__item"><a href="#">Команда</a></li>
+                    <li class="navigation__item"><a href="#">Блог</a></li>
+                </ul>
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#">Цікава інформація</a></li>
+                    <li class="navigation__item"><a href="#">Вакансії</a></li>
+                    <li class="navigation__item"><a href="#">Доставка та оплата</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <h3 class="social-media__title">Соціальні мережі</h3>
+                <ul class="social-media__list">
+                    <li class="social-media__icon"><a href="#"><img src="img/facebook.svg" alt="Facebook logo"></a></li>
+                    <li class="social-media__icon"><a href="#"><img src="img/youtube.svg" alt="Youtube logo"></a></li>
+                    <li class="social-media__icon"><a href="#"><img src="img/email.svg" alt="Email logo"></a></li>
+                    <li class="social-media__icon"><a href="#"><img src="img/pinterest.svg" alt="Pinterest logo"></a></li>
+                    <li class="social-media__icon"><a href="#"><img src="img/instagram.svg" alt="Instagram logo"></a></li>
+                </ul>
+            </div>
+            <nav class="grid grid--nav special-project">
+                <div><a class="special-project__item" href="#">Drabyna</a></div>
+                <div><a class="special-project__item" href="#">Етнодім Маніфест</a></div>
+            </nav>
+            <div class="contacts">
+                <h3 class="contacts__title">Контакти</h3>
+                <div class="contacts__item">+38 097 888 92 92</div>
+                <div class="contacts__item">Україна, м. Київ, вул. Верхній Вал 58/28</div>
+                <div class="contacts__item contacts__item--flex">
+                    <span class="contacts__item--schedule">пн-пт 10:00-20:00</span>
+                    <span class="contacts__item--schedule">сб-нд 11:00-19:00</span>
+                </div>
+            </div>
+            <div class="copyright">© «Етнодім» 2009-2021</div>
+        </div>
+    </footer>
 </body>
 
 </html>
