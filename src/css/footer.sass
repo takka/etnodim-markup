@@ -1,9 +1,13 @@
+// Variables
+
 $padding-xs: 10px
 $padding-s: 15px
 $padding-m: 20px
 $padding-l: 40px
 $padding-xl: 70px
 $padding-xxl: 80px
+
+// Mixins
 
 @mixin font($font-weight: 300)
     font-family: "Raleway", system-ui
@@ -20,9 +24,25 @@ $padding-xxl: 80px
 
 // Footer
 
+.return-to-top
+    appearance: none
+    border: none
+    background: none
+    cursor: pointer
+    padding: 0
+    width: 100px
+    height: 31px
+    position: absolute
+    top: -24px
+    right: calc(50% - $padding-l)
+    background-image: url("../../img/arrow-mobile.svg")
+    background-repeat: no-repeat
+    background-position: center
+
 .footer
     background: #F4F4F4
     padding: $padding-m $padding-xs
+    position: relative
     @include font
     &__logo
         margin: 0 auto
@@ -79,6 +99,12 @@ $padding-xxl: 80px
     padding-top: $padding-xs
 
 @include desctop
+
+    .return-to-top
+        top: -48px
+        background-image: url("../../img/arrow.svg")
+        height: 58px
+
     .footer
         padding: $padding-xl $padding-xxl
         &__logo

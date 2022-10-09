@@ -1,6 +1,25 @@
+.return-to-top {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  width: 100px;
+  height: 31px;
+  position: absolute;
+  top: -24px;
+  right: calc(50% - 40px);
+  background-image: url("../../img/arrow-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .footer {
   background: #F4F4F4;
   padding: 20px 10px;
+  position: relative;
   font-family: "Raleway", system-ui;
   font-weight: 300;
   font-size: 14px;
@@ -79,6 +98,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .return-to-top {
+    top: -48px;
+    background-image: url("../../img/arrow.svg");
+    height: 58px;
+  }
   .footer {
     padding: 70px 80px;
   }
