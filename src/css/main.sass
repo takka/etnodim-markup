@@ -1,6 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic)
 @import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular)
 
+$padding-xxs: 5px
+$padding-xs: 10px
+$padding-s: 15px
+$padding-m: 20px
+$padding-l: 40px
+$padding-xl: 70px
+$padding-xxl: 80px
+
+@mixin font($font-weight: 300)
+    font-family: "Raleway", system-ui
+    font-weight: $font-weight
+    font-size: 12px
+
+@mixin flex()
+    display: flex
+    flex-wrap: wrap
+
 html
     scroll-behavior: smooth
     height: 100%
@@ -23,3 +40,48 @@ h3
     text-decoration: underline
     text-underline-position: under
     text-decoration-thickness: 0.75px
+
+    
+// Breadcrumbs 
+.breadcrumb
+    @include font
+    font-weight: 600
+
+    &__li
+        display: inline
+
+    &__li::after
+        content: "⎯⎯"
+        padding:0 5px
+
+    &__li--current
+        display: inline
+        font-weight: 300
+
+    
+// Filter
+.filter 
+    @include font
+    padding-left: $padding-xxl
+
+    &__name--mobile
+        display: none
+
+    &__category
+        padding-bottom: $padding-s
+
+    &__title--wrap
+        @include flex
+        gap: 5px
+        font-weight: 600
+        padding-bottom: $padding-s
+
+    &__item
+        padding-bottom: $padding-xs
+        
+    
+.list__arrow
+    display: inline
+
+    &--active
+        transform: rotate(180deg)
