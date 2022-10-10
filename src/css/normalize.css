@@ -40,13 +40,16 @@ body {
 
 /* Remove the default styling for all ul and li that have a class attribute */
 ul[class],
-ol[class] {
+ol[class],
+li[class] {
   list-style: none;
 }
 
 /* Elements a that don't have a class are reset to default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: #000;
 }
 
 img {

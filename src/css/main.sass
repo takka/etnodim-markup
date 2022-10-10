@@ -1,5 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic)
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap')
+@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular)
+
+$padding-xxs: 5px
+$padding-xs: 10px
+$padding-s: 15px
+$padding-m: 20px
+$padding-l: 40px
+$padding-xl: 70px
+$padding-xxl: 80px
+
+@mixin font($font-weight: 300)
+    font-family: "Raleway", system-ui
+    font-weight: $font-weight
+    font-size: 12px
+
+@mixin flex()
+    display: flex
+    flex-wrap: wrap
 
 html
     scroll-behavior: smooth
@@ -20,3 +37,124 @@ body
 
     @media screen and ( max-width: 768px )
         padding: 0 10px
+
+h2
+    font-family: "Dela Gothic One"
+    font-weight: 400
+    font-size: 36px
+
+h3
+    font-weight: 300
+    font-size: 14px
+    text-decoration: underline
+    text-underline-position: under
+    text-decoration-thickness: 0.75px
+
+// Breadcrumbs
+.breadcrumb
+    @include font
+    font-weight: 600
+
+    &__li
+        display: inline
+
+    &__li::after
+        content: "⎯⎯"
+        padding: 0 5px
+
+    &__li--current
+        display: inline
+        font-weight: 300
+
+.top
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    align-items: center
+
+//View
+.view
+    @include font
+    display: inline-block
+    vertical-align: baseline
+
+    &__filter
+
+    &__layout
+        display: inline-block
+        &-img
+            display: inline-block
+            padding-right: $padding-xs
+
+    &__sort
+        display: inline-block
+
+        &-list
+            display: inline-block
+
+        &-item
+            display: inline-block
+
+// Filter
+.filter
+    @include font
+
+    &__name--mobile
+        @include font
+        display: flex
+        display: none
+
+    &__category
+        padding-bottom: $padding-s
+
+    &__title--wrap
+        @include flex
+        gap: 5px
+        font-weight: 600
+        padding-bottom: $padding-s
+
+    &__list
+        &-item
+            padding-bottom: $padding-xs
+
+.checkbox
+
+    &--custom
+        display: inline-block
+        position: relative
+        vertical-align: sub
+        width: 10px
+        height: 10px
+        background: #ffffff
+        border: 1px solid #565656
+        margin-right: 5px
+        box-sizing: content-box
+
+    &--custom::before
+        content: ""
+        display: inline-block
+        position: absolute
+        background: #565656
+        top: 10%
+        left: 10%
+        height: 8px
+        width: 8px
+        border: 0
+        transition: all 0.1s ease-in
+        transform: scale(0)
+
+    &--real:checked + &--custom::before
+        transform: scale(1)
+
+    &--real
+        width: 0
+        height: 0
+        opacity: 0
+        position: absolute
+        z-index: -1
+
+.arrow
+    display: inline
+
+    &--active
+        transform: rotate(180deg)
