@@ -34,15 +34,19 @@ body
     margin: 0 auto
     max-width: 1280px
 
+h2
+    font-family: "Dela Gothic One"
+    font-weight: 400
+    font-size: 36px 
+
 h3
     font-weight: 300
     font-size: 14px
     text-decoration: underline
     text-underline-position: under
     text-decoration-thickness: 0.75px
-
     
-// Breadcrumbs 
+// Breadcrumbs
 .breadcrumb
     @include font
     font-weight: 600
@@ -58,13 +62,45 @@ h3
         display: inline
         font-weight: 300
 
+.top
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    align-items: center
+
+//View
+.view
+    @include font
+    display: inline-block
+    vertical-align: baseline
+
+    &__filter
+
+    &__layout
+        display: inline-block
+        &-img
+            display: inline-block
+            padding-right: $padding-xs
+
+    &__sort
+        display: inline-block
+
+        &-list
+            display: inline-block
+
+        &-item
+            display: inline-block
     
+
+
+
 // Filter
 .filter 
     @include font
-    padding-left: $padding-xxl
 
     &__name--mobile
+        @include font
+        display: flex
         display: none
 
     &__category
@@ -76,11 +112,48 @@ h3
         font-weight: 600
         padding-bottom: $padding-s
 
-    &__item
-        padding-bottom: $padding-xs
+    &__list
+        &-item
+            padding-bottom: $padding-xs
+
+.checkbox
+
+    &--custom
+        display: inline-block
+        position: relative
+        vertical-align: sub
+        width: 10px
+        height: 10px
+        background: #ffffff
+        border: 1px solid #565656
+        margin-right: 5px
+        box-sizing: content-box
+
+    &--custom::before
+        content: ""
+        display: inline-block
+        position: absolute
+        background: #565656
+        top: 10%
+        left: 10%
+        height: 8px
+        width: 8px
+        border: 0
+        transition: all 0.1s ease-in
+        transform: scale(0)
+
+    &--real:checked + &--custom::before
+        transform: scale(1)
+
+    &--real
+        width: 0
+        height: 0
+        opacity: 0
+        position: absolute
+        z-index: -1
         
-    
-.list__arrow
+
+.arrow
     display: inline
 
     &--active
