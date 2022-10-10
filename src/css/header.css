@@ -1,1 +1,197 @@
-/*# sourceMappingURL=header.css.map */
+.header {
+  padding: 25px 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 8px 0px;
+  }
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.header__nav {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 30px;
+}
+.nav__item .active {
+  color: #DA1F39;
+  font-weight: 700;
+}
+
+.lang select {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+}
+
+.currency select {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+}
+
+select option {
+  border: 0;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu__icon {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.menu__icon span {
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: #000;
+}
+.menu__icon span:last-child {
+  width: 10px;
+}
+@media (min-width: 769px) {
+  .menu__icon {
+    display: none;
+  }
+}
+
+.menu__mobile {
+  position: absolute;
+  width: 89vw;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+  padding: 61px 0 20px 0;
+  filter: drop-shadow(6px 6px 8px rgba(71, 71, 71, 0.25)) drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.25));
+}
+.menu__mobile img {
+  position: absolute;
+  top: 13px;
+  left: 42%;
+  max-width: 95px;
+}
+@media (min-width: 769px) {
+  .menu__mobile {
+    display: none;
+  }
+}
+.menu__mobile .lang {
+  display: flex;
+  gap: 25px;
+  margin-left: 10px;
+}
+.menu__mobile .currency {
+  display: flex;
+  gap: 25px;
+}
+.menu__mobile .nav {
+  display: block;
+  margin-left: 10px;
+}
+.menu__mobile .nav .nav__item {
+  margin-bottom: 30px;
+}
+.menu__mobile .nav .nav__link {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Dela Gothic One";
+}
+.menu__mobile .filter {
+  display: flex;
+  gap: 30px;
+}
+.menu__mobile .line {
+  height: 22px;
+  width: 1px;
+  background: #000;
+}
+
+.menu__close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.menu__close::before, .menu__close::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: #000;
+}
+.menu__close::before {
+  transform: rotate(45deg);
+}
+.menu__close::after {
+  transform: rotate(-45deg);
+}
+
+.header__cart {
+  width: 18px;
+  height: 22px;
+  background-image: url("/img/cart.svg");
+  background-size: cover;
+  position: relative;
+}
+
+.header__items-cart {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  bottom: -2px;
+  right: -3px;
+  background-color: #DA1F39;
+  border-radius: 50px;
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  margin-bottom: -6px;
+}/*# sourceMappingURL=header.css.map */
