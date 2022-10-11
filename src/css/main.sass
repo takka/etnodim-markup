@@ -1,5 +1,44 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic)
-@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular)
+//FONTS
+
+@font-face
+    font-family: "Raleway"
+    src: url("../../fonts/RalewayFont/Raleway-Light.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-Light.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-Light.ttf") format("truetype")
+    font-weight: 300
+    font-size: 12px
+    line-height: 19.97px
+    font-display: fallback
+
+@font-face
+    font-family: "Raleway"
+    src: url("../../fonts/RalewayFont/Raleway-Regular.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-Regular.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-Regular.ttf") format("truetype")
+    font-weight: 400
+    font-size: 16px
+    line-height: 18.78px
+    font-display: fallback
+
+@font-face
+    font-family: "Raleway"
+    src: url("../../fonts/RalewayFont/Raleway-SemiBold.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-SemiBold.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-SemiBold.ttf") format("truetype")
+    font-weight: 600
+    font-size: 14px
+    line-height: 16.44px
+    font-display: fallback
+
+@font-face
+    font-family: "Raleway"
+    src: url("../../fonts/RalewayFont/Raleway-Bold.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-Bold.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-Bold.ttf") format("truetype")
+    font-weight: 700
+    font-size: 14px
+    line-height: 23.27px
+    font-display: fallback
+
+@font-face
+    font-family: "Dela Gothic One"
+    src: url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.woff2") format("woff2"), url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.woff") format("woff"), url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.eot") format("embedded opentype"), url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.ttf") format("truetype")
+    font-weight: 400
+    font-size: 14px
+    line-height: 23.27px
+    font-display: fallback
 
 $padding-xxs: 5px
 $padding-xs: 10px
@@ -37,15 +76,15 @@ body
 h2
     font-family: "Dela Gothic One"
     font-weight: 400
-    font-size: 36px 
+    font-size: 36px
 
-h3
+h4
     font-weight: 300
     font-size: 14px
+    line-height: 23.27px
     text-decoration: underline
     text-underline-position: under
-    text-decoration-thickness: 0.75px
-    
+
 // Breadcrumbs
 .breadcrumb
     @include font
@@ -56,7 +95,7 @@ h3
 
     &__li::after
         content: "⎯⎯"
-        padding:0 5px
+        padding: 0 5px
 
     &__li--current
         display: inline
@@ -74,8 +113,6 @@ h3
     display: inline-block
     vertical-align: baseline
 
-    &__filter
-
     &__layout
         display: inline-block
         &-img
@@ -90,12 +127,9 @@ h3
 
         &-item
             display: inline-block
-    
-
-
 
 // Filter
-.filter 
+.filter
     @include font
 
     &__name--mobile
@@ -151,7 +185,6 @@ h3
         opacity: 0
         position: absolute
         z-index: -1
-        
 
 .arrow
     display: inline
