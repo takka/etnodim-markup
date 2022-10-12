@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url("https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular);
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -17,158 +17,141 @@ body {
 .container {
   margin: 0 auto;
   max-width: 1400px;
-    padding: 0 80px;
+  padding: 0 80px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 0 10px;
-    }
+}
 
-        h2 {
-          font-family: "Dela Gothic One";
-          font-weight: 400;
-          font-size: 36px;
-        }
-    
-        h3 {
-          font-weight: 300;
-          font-size: 14px;
-          text-decoration: underline;
-          text-underline-position: under;
-          text-decoration-thickness: 0.75px;
-        }
-    
-        .breadcrumb {
-          font-family: "Raleway", system-ui;
-          font-weight: 300;
-          font-size: 12px;
-          font-weight: 600;
-        }
-    
-        .breadcrumb__li {
-          display: inline;
-        }
-    
-        .breadcrumb__li::after {
-          content: "⎯⎯";
-          padding: 0 5px;
-        }
-    
-        .breadcrumb__li--current {
-          display: inline;
-          font-weight: 300;
-        }
-    
-        .top {
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-          align-items: center;
-        }
-    
-        .view {
-          font-family: "Raleway", system-ui;
-          font-weight: 300;
-          font-size: 12px;
-          display: inline-block;
-          vertical-align: baseline;
-        }
-    
-        .view__layout {
-          display: inline-block;
-        }
-    
-        .view__layout-img {
-          display: inline-block;
-          padding-right: 10px;
-        }
-    
-        .view__sort {
-          display: inline-block;
-        }
-    
-        .view__sort-list {
-          display: inline-block;
-        }
-    
-        .view__sort-item {
-          display: inline-block;
-        }
-    
-        .filter {
-          font-family: "Raleway", system-ui;
-          font-weight: 300;
-          font-size: 12px;
-        }
-    
-        .filter__name--mobile {
-          font-family: "Raleway", system-ui;
-          font-weight: 300;
-          font-size: 12px;
-          display: flex;
-          display: none;
-        }
-    
-        .filter__category {
-          padding-bottom: 15px;
-        }
-    
-        .filter__title--wrap {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 5px;
-          font-weight: 600;
-          padding-bottom: 15px;
-        }
-    
-        .filter__list-item {
-          padding-bottom: 10px;
-        }
-    
-        .checkbox--custom {
-          display: inline-block;
-          position: relative;
-          vertical-align: sub;
-          width: 10px;
-          height: 10px;
-          background: #ffffff;
-          border: 1px solid #565656;
-          margin-right: 5px;
-          box-sizing: content-box;
-        }
-    
-        .checkbox--custom::before {
-          content: "";
-          display: inline-block;
-          position: absolute;
-          background: #565656;
-          top: 10%;
-          left: 10%;
-          height: 8px;
-          width: 8px;
-          border: 0;
-          transition: all 0.1s ease-in;
-          transform: scale(0);
-        }
-    
-        .checkbox--real:checked+.checkbox--custom::before {
-          transform: scale(1);
-        }
-    
-        .checkbox--real {
-          width: 0;
-          height: 0;
-          opacity: 0;
-          position: absolute;
-          z-index: -1;
-        }
-    
-        .arrow {
-          display: inline;
-        }
-    
-        .arrow--active {
-          transform: rotate(180deg);
-        }
-    /*# sourceMappingURL=main.css.map */
+h2 {
+  font-family: "Dela Gothic One";
+  font-weight: 400;
+  font-size: 36px;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 0.75px;
+}
+
+.breadcrumb {
+  font-family: "Raleway", system-ui;
+  font-weight: 300;
+  font-size: 12px;
+  font-weight: 600;
+}
+.breadcrumb__li {
+  display: inline;
+}
+.breadcrumb__li::after {
+  content: "⎯⎯";
+  padding: 0 5px;
+}
+.breadcrumb__li--current {
+  display: inline;
+  font-weight: 300;
+}
+
+.top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view {
+  font-family: "Raleway", system-ui;
+  font-weight: 300;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.view__layout {
+  display: inline-block;
+}
+.view__layout-img {
+  display: inline-block;
+  padding-right: 10px;
+}
+.view__sort {
+  display: inline-block;
+}
+.view__sort-list {
+  display: inline-block;
+}
+.view__sort-item {
+  display: inline-block;
+}
+
+.filter {
+  font-family: "Raleway", system-ui;
+  font-weight: 300;
+  font-size: 12px;
+}
+.filter__name--mobile {
+  font-family: "Raleway", system-ui;
+  font-weight: 300;
+  font-size: 12px;
+  display: flex;
+  display: none;
+}
+.filter__category {
+  padding-bottom: 15px;
+}
+.filter__title--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.filter__list-item {
+  padding-bottom: 10px;
+}
+
+.checkbox--custom {
+  display: inline-block;
+  position: relative;
+  vertical-align: sub;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 1px solid #565656;
+  margin-right: 5px;
+  box-sizing: content-box;
+}
+.checkbox--custom::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: #565656;
+  top: 10%;
+  left: 10%;
+  height: 8px;
+  width: 8px;
+  border: 0;
+  transition: all 0.1s ease-in;
+  transform: scale(0);
+}
+.checkbox--real:checked + .checkbox--custom::before {
+  transform: scale(1);
+}
+.checkbox--real {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.arrow {
+  display: inline;
+}
+.arrow--active {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=main.css.map */

@@ -20,6 +20,12 @@
         text-align: center
         font-feature-settings: 'pnum' on, 'lnum' on
 
+.header__logo
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
 .header__nav
     display: flex
 
@@ -36,6 +42,13 @@
     & .active
         color: #DA1F39
         font-weight: 700
+
+        &::after
+            content: ''
+            width: 19px
+            height: 10px
+            background-image: url('/img/active-link.svg')
+            background-size: cover
 
 .nav__link
 
@@ -66,10 +79,23 @@ select
     align-items: center
     gap: 20px
 
+    & .lang
+        @media (max-width: 768px)
+            display: none
+
+    & .currency
+        @media (max-width: 768px)
+            display: none
+
+    & .header__tel
+        @media (max-width: 768px)
+            display: none
+
 .menu__icon
     display: flex
     flex-direction: column
     gap: 3px
+    cursor: pointer
 
     & span
         display: block
@@ -84,8 +110,10 @@ select
         display: none
 
 .menu__mobile
+    display: none
     position: absolute
     width: 89vw
+    min-width: 334px
     left: 0
     top: 0
     z-index: 2
@@ -133,6 +161,9 @@ select
         width: 1px
         background: #000
 
+.open
+    display: block
+
 .menu__close
     cursor: pointer
     position: absolute
@@ -160,6 +191,10 @@ select
     background-size: cover
     position: relative
 
+    @media (max-width: 768px)
+        width: 14px
+        height: 17px
+
 .header__items-cart
     position: absolute
     height: 12px
@@ -180,6 +215,11 @@ select
 .search
     position: relative
     margin-bottom: -6px
+
+    @media (max-width: 768px)
+        width: 21px
+        height: 21px
+        margin: 0
 
 //     input
 //         height: 42px
