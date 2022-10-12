@@ -136,3 +136,61 @@ $red: #DA1F39
                 padding-bottom: $padding-xs
             &-out-of-stock--size-table
                 padding-bottom: $padding-xs
+
+//product-card__description
+
+.description
+    padding: 70px 0
+    max-width: 433px
+
+    &__point
+        &:not(:last-child)
+            border-bottom: 1px solid #000
+
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 15px 0
+
+    &__icon
+        position: relative
+        width: 11px
+        height: 2px
+        background: #000
+
+        &::after
+            content: ""
+            position: absolute
+            height: 11px
+            width: 2px
+            background: #000
+            top: -4.5px
+            left: 4.5px
+    &__text
+        font-family: 'Raleway'
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 20px
+        font-feature-settings: 'pnum' on, 'lnum' on
+        display: none
+
+    input
+        display: none
+
+        &:checked
+            ~.description__text
+                display: block
+
+            ~.description__title
+                .description__icon
+                    &:after
+                        display: none
+
+    .description__text
+        font-size: 12px
+        line-height: 20px
+
+        & p
+            margin-bottom: 15px

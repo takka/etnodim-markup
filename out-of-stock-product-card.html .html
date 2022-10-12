@@ -17,7 +17,73 @@
 <body>
     <header class="header">
         <div class="container">
-
+            <div class="header__menu menu">
+                <button class="menu__icon" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu__mobile">
+                    <button class="menu__close" type="button">
+                    </button>
+                    <img sizes="(max-width: 768px) 132px, 184px"
+                        srcset="img/etnodim-logo-main-removebg-preview-mobile.svg 132w, img/etnodim-logo-main-removebg-preview-desctop.svg 184w"
+                        src="img/etnodim-logo-main-removebg-preview-desctop.svg" alt="Etnodim logo">
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link active" href="#catalog">Каталог</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#discount">Знижки</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#blog">Блог</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#aboutus">Про нас</a></li>
+                    </ul>
+                    <div class="mobile__bottom">
+                        <ul class="lang">
+                            <li class="lang__item"><a class="lang__link active" href="/UA/">UA</a></li>
+                            <li class="lang__item"><a class="lang__link" href="/EN/">EN</a></li>
+                            <li class="lang__item"><a class="lang__link" href="/RU/">RU</a></li>
+                        </ul>
+                        <div class="line"></div>
+                        <ul class="currency">
+                            <li class="currency__item"><a class="currency__link active" href="/UA/">₴</a></li>
+                            <li class="currency__item"><a class="currency__link" href="/EN/">€</a></li>
+                            <li class="currency__item"><a class="currency__link" href="/RU/">$</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="header__nav">
+                    <li class="nav__item"><a class="nav__link active" href="#catalog">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#discount">Знижки</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#blog">Блог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#aboutus">Про нас</a></li>
+                </ul>
+            </div>
+            <div class="header__logo">
+                <img sizes="(max-width: 768px) 95px, 184px"
+                    srcset="img/etnodim-logo-main-removebg-preview-header-mob.svg 95w, img/etnodim-logo-main-removebg-preview-header-desck.svg 184w"
+                    src="img/etnodim-logo-main-removebg-preview-header-desck.svg" alt="Etnodim logo">
+            </div>
+            <div class="header__content">
+                <div class="lang">
+                    <select>
+                        <option value="/en/">EN</option>
+                        <option value="/ua/">UA</option>
+                    </select>
+                </div>
+                <div class="currency">
+                    <select>
+                        <option value="uah">₴</option>
+                        <option value="eur">€</option>
+                        <option value="usd">$</option>
+                    </select>
+                </div>
+                <a class="header__tel" href="tel:+380978889292">+38 097 888 92 92</a>
+                <form class="search" action="" method="">
+                    <!-- <input name="s" placeholder="" type="search"> -->
+                    <button type="submit"><img src="img/search.svg" alt=""></button>
+                </form>
+                <div class="header__cart">
+                    <div class="header__items-cart">1</div>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -34,7 +100,8 @@
                             <div class="product-card__color">Колір: бежевий</div>
                             <div class="product-card__container">
                                 <button class="form__button">
-                                    <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="21" height="21" viewbox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <rect width="21" height="21" fill="#F4F4F4" />
                                         <path
                                             d="M5.125 10.0312H15.625C15.7083 10.0312 15.75 10.0729 15.75 10.1562V11.0937C15.75 11.1771 15.7083 11.2187 15.625 11.2187H5.125C5.04167 11.2187 5 11.1771 5 11.0937V10.1562C5 10.0729 5.04167 10.0312 5.125 10.0312Z"
@@ -43,7 +110,8 @@
                                 </button>
                                 <input class="form__input" type="text" value="1">
                                 <button class="form__button">
-                                    <svg width="21" height="21" viewbox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="21" height="21" viewbox="0 0 21 21" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <rect width="21" height="21" fill="#F4F4F4" />
                                         <path
                                             d="M9.90625 5H10.8438C10.9271 5 10.9688 5.04167 10.9688 5.125V16.125C10.9688 16.2083 10.9271 16.25 10.8438 16.25H9.90625C9.82292 16.25 9.78125 16.2083 9.78125 16.125V5.125C9.78125 5.04167 9.82292 5 9.90625 5Z"
@@ -79,64 +147,163 @@
                             <div class="product-card__price">2 800 грн.</div>
                         </div>
                         <div>
-                            <input class="form__submit form__submit--out-of-stock uppercase" type="submit" value="Cповістити про наявність">
+                            <input class="form__submit form__submit--out-of-stock uppercase" type="submit"
+                                value="Cповістити про наявність">
                         </div>
                     </form>
                 </div>
-                
-                <div class="product-card__description"></div>
+                <div class="product-card__description description">
+                    <div class="description__point">
+                        <input class='description__input' type="checkbox" name="description" id="description_1">
+                        <label class="description__title" for="description_1">
+                            <h3>Про товар</h3>
+                            <div class="description__icon">
+                            </div>
+                        </label>
+                        <div class="description__text">
+                            <p>Тепло, на яке кожен так довго чекав, здається прийшло. А разом з ним нова вишиванка під
+                                назвою LITO.</p>
+
+                            <p>Сорочка стане невід’ємною частиною гардеробу не тільки на весняно- літній сезон, але й
+                                поверне вас до спогадів про літо
+                                в холодну пору року.</p>
+
+                            <p>Якщо Ви не впевнені щодо розміру - зверніться до наших менеджерів, ми завжди раді Вам
+                                допомогти:)</p>
+                        </div>
+                    </div>
+                    <div class="description__point">
+                        <input class='description__input' type="checkbox" name="description" id="description_2">
+                        <label class="description__title" for="description_2">
+                            <h3>Склад та догляд</h3>
+                            <div class="description__icon">
+                            </div>
+                        </label>
+                        <div class="description__text">
+                            <p>Тепло, на яке кожен так довго чекав, здається прийшло. А разом з ним нова вишиванка під
+                                назвою LITO.</p>
+
+                            <p>Створена в ніжному кремовому відтінку на тлі якого щедро розмістились польові квіти.
+                                Фактурні та різноманітні,
+                                кольорові, унікальні-саме такі, як спогади про літо дизайнерки Лілії Касянчук, котра
+                                через вишивку передала спогади із
+                                власного дитинства.</p>
+
+
+                            <p>Якщо Ви не впевнені щодо розміру - зверніться до наших менеджерів, ми завжди раді Вам
+                                допомогти:)</p>
+                        </div>
+                    </div>
+                    <div class="description__point">
+                        <input class='description__input' type="checkbox" name="description" id="description_3">
+                        <label class="description__title" for="description_3">
+                            <h3>Доставка та оплата</h3>
+                            <div class="description__icon">
+                            </div>
+                        </label>
+                        <div class="description__text">
+                            <p>Тепло, на яке кожен так довго чекав, здається прийшло. А разом з ним нова вишиванка під
+                                назвою LITO.</p>
+
+                            <p>Створена в ніжному кремовому відтінку на тлі якого щедро розмістились польові квіти.
+                                Фактурні та різноманітні,
+                                кольорові, унікальні-саме такі, як спогади про літо дизайнерки Лілії Касянчук, котра
+                                через вишивку передала спогади із
+                                власного дитинства.</p>
+
+                            <p>Сорочка стане невід’ємною частиною гардеробу не тільки на весняно- літній сезон, але й
+                                поверне вас до спогадів про літо
+                                в холодну пору року.</p>
+
+                            <p>Якщо Ви не впевнені щодо розміру - зверніться до наших менеджерів, ми завжди раді Вам
+                                допомогти:)</p>
+                        </div>
+                    </div>
+                    <div class="description__point">
+                        <input class='description__input' type="checkbox" name="description" id="description_4">
+                        <label class="description__title" for="description_4">
+                            <h3>Відгуки</h3>
+                            <div class="description__icon">
+                            </div>
+                        </label>
+                        <div class="description__text">
+
+                            <p>Створена в ніжному кремовому відтінку на тлі якого щедро розмістились польові квіти.
+                                Фактурні та різноманітні,
+                                кольорові, унікальні-саме такі, як спогади про літо дизайнерки Лілії Касянчук, котра
+                                через вишивку передала спогади із
+                                власного дитинства.</p>
+
+                            <p>Сорочка стане невід’ємною частиною гардеробу не тільки на весняно- літній сезон, але й
+                                поверне вас до спогадів про літо
+                                в холодну пору року.</p>
+
+                            <p>Якщо Ви не впевнені щодо розміру - зверніться до наших менеджерів, ми завжди раді Вам
+                                допомогти:)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <button class="return-to-top"></button>
-        <div class="footer__logo">
-            <img sizes="(max-width: 768px) 132px,
+        <div class="container">
+            <button class="return-to-top"></button>
+            <div class="footer__logo">
+                <img sizes="(max-width: 768px) 132px,
                         184px" srcset="
                         img/etnodim-logo-main-removebg-preview-mobile.svg 132w,
                         img/etnodim-logo-main-removebg-preview-desctop.svg 184w"
-                src="img/etnodim-logo-main-removebg-preview-desctop.svg" alt="Etnodim logo">
-        </div>
-        <div class="footer__grid grid">
-            <nav class="grid grid--nav navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#">Про нас</a></li>
-                    <li class="navigation__item"><a href="#">Команда</a></li>
-                    <li class="navigation__item"><a href="#">Блог</a></li>
-                </ul>
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#">Цікава інформація</a></li>
-                    <li class="navigation__item"><a href="#">Вакансії</a></li>
-                    <li class="navigation__item"><a href="#">Доставка та оплата</a></li>
-                </ul>
-            </nav>
-            <div class="social-media">
-                <h4 class="social-media__title">Соціальні мережі</h4>
-                <ul class="social-media__list">
-                    <li class="social-media__icon"><a href="#"><img src="img/facebook.svg" alt="Facebook logo"></a></li>
-                    <li class="social-media__icon"><a href="#"><img src="img/youtube.svg" alt="Youtube logo"></a></li>
-                    <li class="social-media__icon"><a href="#"><img src="img/email.svg" alt="Email logo"></a></li>
-                    <li class="social-media__icon"><a href="#"><img src="img/pinterest.svg" alt="Pinterest logo"></a></li>
-                    <li class="social-media__icon"><a href="#"><img src="img/instagram.svg" alt="Instagram logo"></a></li>
-                </ul>
+                    src="img/etnodim-logo-main-removebg-preview-desctop.svg" alt="Etnodim logo">
             </div>
-            <nav class="grid grid--nav special-project">
-                <div><a class="special-project__item" href="#">Drabyna</a></div>
-                <div><a class="special-project__item" href="#">Етнодім Маніфест</a></div>
-            </nav>
-            <div class="contacts">
-                <h4 class="contacts__title">Контакти</h4>
-                <div class="contacts__item">+38 097 888 92 92</div>
-                <div class="contacts__item">Україна, м. Київ, вул. Верхній Вал 58/28</div>
-                <div class="contacts__item contacts__item--flex">
-                    <span class="contacts__item--schedule">пн-пт 10:00-20:00</span>
-                    <span class="contacts__item--schedule">сб-нд 11:00-19:00</span>
+            <div class="footer__grid grid">
+                <nav class="grid grid--nav navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#">Про нас</a></li>
+                        <li class="navigation__item"><a href="#">Команда</a></li>
+                        <li class="navigation__item"><a href="#">Блог</a></li>
+                    </ul>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#">Цікава інформація</a></li>
+                        <li class="navigation__item"><a href="#">Вакансії</a></li>
+                        <li class="navigation__item"><a href="#">Доставка та оплата</a></li>
+                    </ul>
+                </nav>
+                <div class="social-media">
+                    <h4 class="social-media__title">Соціальні мережі</h4>
+                    <ul class="social-media__list">
+                        <li class="social-media__icon"><a href="#"><img src="img/facebook.svg" alt="Facebook logo"></a>
+                        </li>
+                        <li class="social-media__icon"><a href="#"><img src="img/youtube.svg" alt="Youtube logo"></a>
+                        </li>
+                        <li class="social-media__icon"><a href="#"><img src="img/email.svg" alt="Email logo"></a></li>
+                        <li class="social-media__icon"><a href="#"><img src="img/pinterest.svg"
+                                    alt="Pinterest logo"></a>
+                        </li>
+                        <li class="social-media__icon"><a href="#"><img src="img/instagram.svg"
+                                    alt="Instagram logo"></a>
+                        </li>
+                    </ul>
                 </div>
+                <nav class="grid grid--nav special-project">
+                    <div><a class="special-project__item" href="#">Drabyna</a></div>
+                    <div><a class="special-project__item" href="#">Етнодім Маніфест</a></div>
+                </nav>
+                <div class="contacts">
+                    <h4 class="contacts__title">Контакти</h4>
+                    <div class="contacts__item">+38 097 888 92 92</div>
+                    <div class="contacts__item">Україна, м. Київ, вул. Верхній Вал 58/28</div>
+                    <div class="contacts__item contacts__item--flex">
+                        <span class="contacts__item--schedule">пн-пт 10:00-20:00</span>
+                        <span class="contacts__item--schedule">сб-нд 11:00-19:00</span>
+                    </div>
+                </div>
+                <div class="copyright">© «Етнодім» 2009-2021</div>
             </div>
-            <div class="copyright">© «Етнодім» 2009-2021</div>
         </div>
     </footer>
+    <script src="src/script/script.js">  </script>
 </body>
 
 </html>

@@ -56,9 +56,21 @@ main {
   position: relative;
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 80px;
+  }
+}
 .container {
   padding: 0 10px;
   margin: 0 auto;
+  max-width: 1400px;
+}
+@media (min-width: 769px) and (max-width: 1036px) {
+  .container {
+    padding: 0 20px !important;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -70,6 +82,7 @@ main {
 h2 {
   font-family: "Dela Gothic One";
   font-weight: 400;
+  font-size: 36px;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -85,6 +98,7 @@ h4 {
   line-height: 23.27px;
   text-decoration: underline;
   text-underline-position: under;
+  text-decoration-thickness: 0.75px;
 }
 
 .breadcrumb {
@@ -185,6 +199,7 @@ h4 {
   font-size: 12px;
   display: block;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .filter__flexwrap--mobile {
   display: flex;
@@ -202,6 +217,14 @@ h4 {
 }
 .filter__list-item {
   padding-bottom: 10px;
+}
+
+.filter__mobile {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 @media only screen and (min-width: 768px) {
@@ -257,6 +280,10 @@ h4 {
 
 .arrow {
   display: inline;
+}
+.arrow:hover {
+  transition: all 0.05s ease-in;
+  color: #939694;
 }
 .arrow--active {
   transform: rotate(180deg);
