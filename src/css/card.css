@@ -1,0 +1,114 @@
+.card {
+  width: 100%;
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+@media (max-width:767px) {
+  .card {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width:460px) {
+  .card {
+    gap: 20px;
+  }
+}
+
+.card__item {
+  width: 44%;
+}
+
+.card__img:hover {
+  background: url(../../img/nature.jpg) no-repeat;
+  background-size: cover;
+}
+
+.card__img > img{
+  width: 100%;
+}
+
+.card__description {
+  margin-top: 10px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 166.19%;
+}
+
+@media (max-width:510px) {
+  .card__description{
+    font-size: 12px;
+    -webkit-line-clamp: 2; /* Число отображаемых строк */
+    display: -webkit-box; /* Включаем флексбоксы */
+    -webkit-box-orient: vertical; /* Вертикальная ориентация */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+  }
+}
+
+.card__price {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 166.2%;
+}
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 65px 0 130px;
+  gap: 35%;
+  padding-right: 3%;
+}
+
+@media (max-width:460px) {
+  .page-nav {
+    justify-content: center;
+    margin: 65px 0 50px;
+  }
+}
+
+.view-more > img {
+  padding-left: 5px;
+  vertical-align: text-bottom;
+}
+
+.page-list {
+  display: flex;
+  gap: 10px ;
+}
+
+@media (max-width:460px) {
+  .page-list {
+    display: none;
+  }
+}
+
+.page {
+  padding: 10px;
+}
+
+li {
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 14px
+}
+
+.view-more {
+  display: flex;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  align-items: center;
+}
+
