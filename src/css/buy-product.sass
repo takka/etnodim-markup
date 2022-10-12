@@ -1,0 +1,138 @@
+// Variables
+
+$padding-xs: 10px
+$padding-s: 15px
+$padding-m: 20px
+$padding-l: 40px
+$padding-xl: 70px
+$padding-xxl: 80px
+$red: #DA1F39
+
+// Mixins
+
+@mixin font($font-weight: 300)
+    font-family: "Raleway", system-ui
+    font-weight: $font-weight
+
+@mixin font-heading($font-weight: 400)
+    font-family: "Dela Gothic One", system-ui
+    font-weight: $font-weight
+    font-size: 18px
+    line-height: 27.23px
+
+@mixin desktop()
+    @media only screen and (min-width: 768px)
+        @content
+
+@mixin button()
+    appearance: none
+    border: none
+    background: none
+    cursor: pointer
+    padding: 0
+
+.uppercase
+    text-transform: uppercase
+
+.product-card
+    padding: 0 $padding-xs
+    &__info
+        @include font
+    &__subtitle
+        display: none
+    &__title
+        @include font-heading
+        padding-bottom: $padding-m
+    &__color
+        padding-right: 47px
+        font-size: 14px
+        line-height: 23.27px
+    &__size
+        cursor: pointer
+        font-size: 14px
+        line-height: 23.27px
+    input:checked + &__size
+        @include font($font-weight: 700)
+    &__out-of-stock
+        color: $red
+        font-size: 12px
+        line-height: 19.97px
+    &__size-tabe
+        @include button
+        font-size: 12px
+        line-height: 19.97px
+        text-decoration: underline
+        text-underline-position: under
+    &__price
+        @include font($font-weight: 700)
+    &__container
+        display: flex
+        align-items: center
+        &--amount
+            padding-bottom: $padding-m
+        &--size
+            padding-bottom: $padding-xs
+            justify-content: space-between
+            max-width: 327px
+        &--out-of-stock
+            padding-bottom: calc($padding-xs / 2)
+        &--size-table
+            padding-bottom: 30px
+        &-out-of-stock--size-table
+            padding-bottom: calc($padding-xs / 2)
+        &--price
+            padding-bottom: $padding-xs
+
+.form
+    &__input
+        appearance: none
+        border: none
+        width: 30px
+        text-align: center
+        cursor: pointer
+    &__button
+        @include button
+        height: 21px
+    &__submit
+        @include button
+        @include font($font-weight: 600)
+        font-size: 14px
+        line-height: 16.44px
+        background: $red
+        color: #FFF
+        padding: 17px 79px
+        &--out-of-stock
+            @include font($font-weight: 600)
+            font-size: 14px
+            line-height: 16.44px
+            padding: 17px
+
+@include desktop
+
+    .product-card
+        display: grid
+        grid-template-columns: 1fr 1fr
+        &__img
+            grid-column: 1/2
+        &__info
+            padding-left: 16%
+            padding-right: $padding-s
+            grid-column: 2/3
+        &__subtitle
+            display: block
+            @include font($font-weight: 400)
+            font-size: 10px
+            line-height: 11.74px
+            color: #B5B5B5
+        &__title
+            padding-bottom: $padding-l
+            max-width: 434px
+        &__container
+            &--size
+                padding-bottom: calc($padding-xs / 2)
+            &--size-table
+                padding-bottom: $padding-l
+            &-out-of-stock
+                padding-bottom: $padding-xs
+            &-out-of-stock--size-table
+                padding-bottom: $padding-xs

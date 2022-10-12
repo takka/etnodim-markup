@@ -1,6 +1,44 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Dela+Gothic+One:regular);
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/RalewayFont/Raleway-Light.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-Light.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 19.97px;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/RalewayFont/Raleway-Regular.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-Regular.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18.78px;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/RalewayFont/Raleway-SemiBold.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-SemiBold.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16.44px;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/RalewayFont/Raleway-Bold.woff") format("woff"), url("../../fonts/RalewayFont/Raleway-Bold.eot") format("embedded opentype"), url("../../fonts/RalewayFont/Raleway-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 23.27px;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Dela Gothic One";
+  src: url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.woff2") format("woff2"), url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.woff") format("woff"), url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.eot") format("embedded opentype"), url("../../fonts/DelaGothicOne/DelaGothicOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23.27px;
+  font-display: fallback;
+}
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -14,7 +52,12 @@ body {
   position: relative;
 }
 
+main {
+  position: relative;
+}
+
 .container {
+  padding: 0 10px;
   margin: 0 auto;
   max-width: 1400px;
   padding: 0 80px;
@@ -25,18 +68,30 @@ body {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 80px;
+  }
+}
 h2 {
   font-family: "Dela Gothic One";
   font-weight: 400;
-  font-size: 36px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
-h3 {
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+h4 {
   font-weight: 300;
   font-size: 14px;
+  line-height: 23.27px;
   text-decoration: underline;
   text-underline-position: under;
-  text-decoration-thickness: 0.75px;
 }
 
 .breadcrumb {
@@ -44,6 +99,7 @@ h3 {
   font-weight: 300;
   font-size: 12px;
   font-weight: 600;
+  display: none;
 }
 .breadcrumb__li {
   display: inline;
@@ -57,24 +113,40 @@ h3 {
   font-weight: 300;
 }
 
+@media only screen and (min-width: 768px) {
+  .breadcrumb {
+    display: block;
+  }
+}
 .top {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: normal;
 }
 
+.title {
+  text-align: right;
+}
+
+@media only screen and (min-width: 768px) {
+  .top {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
 .view {
   font-family: "Raleway", system-ui;
   font-weight: 300;
   font-size: 12px;
-  display: inline-block;
+  display: flex;
   vertical-align: baseline;
+  justify-content: space-between;
 }
 .view__layout {
-  display: inline-block;
+  display: none;
 }
-.view__layout-img {
+.view-img {
   display: inline-block;
   padding-right: 10px;
 }
@@ -88,17 +160,42 @@ h3 {
   display: inline-block;
 }
 
+@media only screen and (min-width: 768px) {
+  .view__layout {
+    display: inline-block;
+  }
+  .view__layout-img {
+    display: inline-block;
+    padding-right: 5px;
+    opacity: 50%;
+  }
+  .view__layout-img--active {
+    opacity: 100%;
+  }
+}
 .filter {
   font-family: "Raleway", system-ui;
   font-weight: 300;
   font-size: 12px;
+  position: absolute;
+  width: 349px;
+  height: 541px;
+  top: 50%;
+  left: 0%;
+  background: #FFFFFF;
+  box-shadow: 6px 6px 8px rgba(179, 179, 179, 0.25), 4px 4px 6px rgba(135, 135, 135, 0.25);
+  z-index: 2;
 }
 .filter__name--mobile {
   font-family: "Raleway", system-ui;
   font-weight: 300;
   font-size: 12px;
+  display: block;
+  padding-bottom: 10px;
+}
+.filter__flexwrap--mobile {
   display: flex;
-  display: none;
+  justify-content: space-between;
 }
 .filter__category {
   padding-bottom: 15px;
@@ -114,6 +211,22 @@ h3 {
   padding-bottom: 10px;
 }
 
+@media only screen and (min-width: 768px) {
+  .filter {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    z-index: 0;
+  }
+  .filter__flexwrap--mobile {
+    display: block;
+  }
+  .filter__name--mobile {
+    display: none;
+  }
+}
 .checkbox--custom {
   display: inline-block;
   position: relative;

@@ -77,3 +77,15 @@ button {
   padding: 0;
   margin: 0;
 }
+
+/* Hover gray color on links */
+
+a:hover {
+  transition: all 0.05s ease-in;
+  color: #939694;
+}
+label:hover {
+  transition: all 0.05s ease-in;
+  color: #939694;
+}
+
