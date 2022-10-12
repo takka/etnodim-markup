@@ -61,7 +61,7 @@
   content: "";
   width: 19px;
   height: 10px;
-  background-image: url("/img/active-link.svg");
+  background-image: url("/etnodim-markup/img/active-link.svg");
   background-size: cover;
 }
 
@@ -175,7 +175,7 @@ select option {
   text-transform: uppercase;
   font-family: "Dela Gothic One";
 }
-.menu__mobile .filter {
+.menu__mobile .mobile__bottom {
   display: flex;
   gap: 30px;
 }
@@ -212,7 +212,7 @@ select option {
 .header__cart {
   width: 18px;
   height: 22px;
-  background-image: url("/img/cart.svg");
+  background-image: url("/etnodim-markup/img/cart.svg");
   background-size: cover;
   position: relative;
 }

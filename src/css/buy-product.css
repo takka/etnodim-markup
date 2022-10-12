@@ -160,4 +160,57 @@ input:checked + .product-card__size {
   .product-card__container-out-of-stock--size-table {
     padding-bottom: 10px;
   }
+}
+.description {
+  padding: 70px 0;
+  max-width: 433px;
+}
+.description__point:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+.description__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.description__icon {
+  position: relative;
+  width: 11px;
+  height: 2px;
+  background: #000;
+}
+.description__icon::after {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 2px;
+  background: #000;
+  top: -4.5px;
+  left: 4.5px;
+}
+.description__text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 20px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  display: none;
+}
+.description input {
+  display: none;
+}
+.description input:checked ~ .description__text {
+  display: block;
+}
+.description input:checked ~ .description__title .description__icon:after {
+  display: none;
+}
+.description .description__text {
+  font-size: 12px;
+  line-height: 20px;
+}
+.description .description__text p {
+  margin-bottom: 15px;
 }/*# sourceMappingURL=buy-product.css.map */
