@@ -71,6 +71,13 @@ select {
   outline: none;
 }
 
+button { 
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* Hover gray color on links */
 
 a:hover {
@@ -81,3 +88,4 @@ label:hover {
   transition: all 0.05s ease-in;
   color: #939694;
 }
+

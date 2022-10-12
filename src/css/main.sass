@@ -84,15 +84,25 @@ main
 .container
     padding: 0 $padding-xs
     margin: 0 auto
+    max-width: 1400px
+    padding: 0 80px
+
+    @media screen and ( max-width: 768px )
+        padding: 0 10px
+
 
 @include desktop
     .container
         max-width: 1280px
         padding: 0 $padding-xxl
 
+
 h2
     font-family: "Dela Gothic One"
     font-weight: 400
+
+    font-size: 36px
+
     font-size: 18px
     text-transform: uppercase
     
@@ -106,6 +116,9 @@ h4
     line-height: 23.27px
     text-decoration: underline
     text-underline-position: under
+    text-decoration-thickness: 0.75px
+
+
 
 
 // Breadcrumbs
@@ -171,6 +184,10 @@ h4
     .view
         &__layout
             display: inline-block
+
+
+// Filter
+
         
         &__layout-img
             display: inline-block
@@ -182,6 +199,7 @@ h4
 
 
 // Filter
+
 
 .filter
     @include font
