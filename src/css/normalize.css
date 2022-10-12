@@ -71,7 +71,7 @@ select {
   outline: none;
 }
 
-button { 
+button {
   background: none;
   border: none;
   padding: 0;
@@ -88,4 +88,3 @@ label:hover {
   transition: all 0.05s ease-in;
   color: #939694;
 }
-
