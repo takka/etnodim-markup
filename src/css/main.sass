@@ -40,7 +40,6 @@
     line-height: 23.27px
     font-display: fallback
 
-
 // Variables
 
 $padding-xxs: 5px
@@ -50,7 +49,6 @@ $padding-m: 20px
 $padding-l: 40px
 $padding-xl: 70px
 $padding-xxl: 80px
-
 
 // Mixins
 
@@ -81,21 +79,23 @@ body
 main
     position: relative
 
-.container
-    padding: 0 $padding-xs
-    margin: 0 auto
-    max-width: 1400px
-    padding: 0 80px
-
-    @media screen and ( max-width: 768px )
-        padding: 0 10px
-
-
 @include desktop
     .container
         max-width: 1280px
         padding: 0 $padding-xxl
 
+.container
+    padding: 0 $padding-xs
+    margin: 0 auto
+    max-width: 1400px
+
+    @media (min-width: 769px) and (max-width: 1036px)
+        padding: 0 20px !important
+
+@include desktop
+    .container
+        max-width: 1280px
+        padding: 0 $padding-xxl
 
 h2
     font-family: "Dela Gothic One"
@@ -105,7 +105,7 @@ h2
 
     font-size: 18px
     text-transform: uppercase
-    
+
 @include desktop
     h2
         font-size: 36px
@@ -117,9 +117,6 @@ h4
     text-decoration: underline
     text-underline-position: under
     text-decoration-thickness: 0.75px
-
-
-
 
 // Breadcrumbs
 
@@ -157,7 +154,6 @@ h4
         flex-direction: row-reverse
         align-items: center
 
-
 //View
 
 .view
@@ -169,8 +165,8 @@ h4
     &__layout
         display: none
     &-img
-            display: inline-block
-            padding-right: $padding-xs
+        display: inline-block
+        padding-right: $padding-xs
     &__sort
         display: inline-block
 
@@ -178,17 +174,15 @@ h4
             display: inline-block
 
         &-item
-            display: inline-block       
+            display: inline-block
 
 @include desktop
     .view
         &__layout
             display: inline-block
 
-
 // Filter
 
-        
         &__layout-img
             display: inline-block
             padding-right: $padding-xxs
@@ -197,9 +191,7 @@ h4
         &__layout-img--active
             opacity: 100%
 
-
 // Filter
-
 
 .filter
     @include font
@@ -217,6 +209,7 @@ h4
         @include font
         display: block
         padding-bottom: $padding-xs
+        cursor: pointer
 
     &__flexwrap--mobile
         display: flex
@@ -235,6 +228,12 @@ h4
         &-item
             padding-bottom: $padding-xs
 
+.filter__mobile
+    display: none
+
+.show
+    display: block
+
 @include desktop
     .filter
         display: block
@@ -243,6 +242,8 @@ h4
         height: auto
         box-shadow: none
         z-index: 0
+
+        @media (max-width:768px)
 
         &__flexwrap--mobile
             display: block

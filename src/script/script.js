@@ -22,7 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 });
 
+// фільтр на мобільному відкриття закриття 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let filter = document.querySelector(".view__filter");
+    let filterShow = document.querySelector(".filter__mobile");
+
+  filter.addEventListener('click', function (event) {
+    event.preventDefault();
+    filterShow.classList.toggle('show');
+  })
+
+});
 
 // // мобильное меню
 // document.addEventListener("DOMContentLoaded", function () {
