@@ -36,14 +36,14 @@
     </section>
     <main>
         <div class="top container">
-            <h2>Жіночі вишиванки</h2>
+            <h2 class="title">Жіночі вишиванки</h2>
             <section class="view">
                 <div class="view__filter filter__name--mobile"> 
                     Фільтри 
                     <img class="arrow" src="img/list-arrow.svg">
                 </div>
                 <div class="view__layout">
-                    <img class="view__layout-img" src="img/view-type-2x2.svg">
+                    <img class="view__layout-img view__layout-img--active" src="img/view-type-2x2.svg">
                     <img class="view__layout-img" src="img/view-type-3x3.svg">
                 </div>
                 <div class="view__sort">
@@ -57,190 +57,191 @@
                 </div>
             </section>
         </div>
-
-
-
-
-
         <aside class="filter container">
             <div class="filter__name--mobile">
                 Фільтри
-                <img class="arrow--active" src="img/list-arrow.svg">
+                <img class="arrow arrow--active" src="img/list-arrow.svg">
             </div>
-            <div class="filter__category sizes">
-                <div class="filter__title--wrap">
-                    Розмір
-                    <img class="arrow arrow--active" src="img/list-arrow.svg">
-                </div>
-                <ul class="filter__list">
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            32 | XXS (53)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            34 | XS (60)
-                            </label>
-                        </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            36 | S (60)</label>
-                        </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            38 | M (60)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            40 | L (60)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            42 | XL (58)</label>
+            <div class="filter__flexwrap--mobile">
+                <div class="left-column">
+                    <div class="filter__category sizes">
+                        <div class="filter__title--wrap">
+                            Розмір
+                            <img class="arrow arrow--active" src="img/list-arrow.svg">
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    32 | XXS (53)
+                                </label>
                             </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            46 | XXL (13)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            48 | XХXL (4)
-                        </label>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="filter__category color">
-                <div class="filter__title--wrap">
-                    Колір
-                    <img class="arrow arrow--active" src="img/list-arrow.svg">
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    34 | XS (60)
+                                    </label>
+                                </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    36 | S (60)</label>
+                                </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    38 | M (60)
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    40 | L (60)
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    42 | XL (58)</label>
+                                    </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    46 | XXL (13)
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    48 | XХXL (4)
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__category color">
+                        <div class="filter__title--wrap">
+                            Колір
+                            <img class="arrow arrow--active" src="img/list-arrow.svg">
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    білий
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    чорний
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    бежевий
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    зелений
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    синій
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="filter__list">
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            білий
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            чорний
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            бежевий
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            зелений
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            синій
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="filter__category season">
-                <div class="filter__title--wrap">
-                    Сезон
-                    <img class="arrow arrow--active" src="img/list-arrow.svg">
+                <div class="right-column">
+                    <div class="filter__category season">
+                        <div class="filter__title--wrap">
+                            Сезон
+                            <img class="arrow arrow--active" src="img/list-arrow.svg">
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    Easy collection (3)
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    Усі сезони (46)
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__category cloth">
+                        <div class="filter__title--wrap">
+                            Тканина
+                            <img class="arrow arrow--active" src="img/list-arrow.svg">
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    Льон (60)
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    Сатин (1)
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter__category sleeve"> 
+                        <div class="filter__title--wrap">
+                            Рукав
+                            <img class="arrow arrow--active" src="img/list-arrow.svg">
+                        </div>
+                        <ul class="filter__list">
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    Довгий рукав (49)
+                                </label>
+                            </li>
+                            <li class="filter__list-item">
+                                <label>
+                                    <input class="checkbox--real" type="checkbox">
+                                    <span class="checkbox--custom"></span>
+                                    3/4 рукав (11)
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="filter__list">
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            Easy collection (3)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            Усі сезони (46)
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="filter__category cloth">
-                <div class="filter__title--wrap">
-                    Тканина
-                    <img class="arrow arrow--active" src="img/list-arrow.svg">
-                </div>
-                <ul class="filter__list">
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            Льон (60)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            Сатин (1)
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="filter__category sleeve"> 
-                <div class="filter__title--wrap">
-                    Рукав
-                    <img class="arrow arrow--active" src="img/list-arrow.svg">
-                </div>
-                <ul class="filter__list">
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            Довгий рукав (49)
-                        </label>
-                    </li>
-                    <li class="filter__list-item">
-                        <label>
-                            <input class="checkbox--real" type="checkbox">
-                            <span class="checkbox--custom"></span>
-                            3/4 рукав (11)
-                        </label>
-                    </li>
-                </ul>
             </div>
         </aside>
     </main>
+
     <footer class="footer">
         <button class="return-to-top"></button>
         <div class="footer__logo">
