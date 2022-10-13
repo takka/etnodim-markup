@@ -34,8 +34,51 @@ $red: #DA1F39
 .uppercase
     text-transform: uppercase
 
+// Breadcrumbs
+
+.breadcrumb
+    @include font
+    font-weight: 600
+    display: none
+
+    &__li
+        display: inline
+
+    &__li::after
+        content: "⎯⎯"
+        padding: 0 5px
+
+    &__li--current
+        display: inline
+        font-weight: 300
+
+@include desktop
+    .breadcrumb
+        display: block
+        padding-top: $padding-xs
+
 .product-card
-    padding: 0 $padding-xs
+    // padding: 0 $padding-xs
+
+    &__img
+        padding: 0px
+    
+    &__img--flex-wrap-vertical
+        display: flex
+        flex-direction: column
+        gap: 40px
+            
+    &__img--flex-wrap-horizontal1
+        display: flex
+        justify-content: space-between
+        flex-wrap: nowrap
+        gap: 10px
+
+    @include desktop
+        .product-card
+            &__img--flex-wrap-horizontal1
+                flex-wrap: wrap
+
     &__info
         @include font
     &__subtitle

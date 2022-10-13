@@ -79,6 +79,12 @@ body
 main
     position: relative
 
+// Це треба буде активувати, коли будуть готові карточки товарів
+// .main    
+    // &__flex-wrap
+    //     display: flex
+    //     flex-direction: row-reverse
+
 @include desktop
     .container
         max-width: 1280px
@@ -100,11 +106,10 @@ main
 h2
     font-family: "Dela Gothic One"
     font-weight: 400
-
-    font-size: 36px
-
     font-size: 18px
     text-transform: uppercase
+    padding-top: $padding-m
+    padding-bottom: $padding-m
 
 @include desktop
     h2
@@ -139,6 +144,8 @@ h4
 @include desktop
     .breadcrumb
         display: block
+        padding-top: $padding-xs
+        padding-bottom: $padding-m
 
 .top
     display: flex
@@ -164,17 +171,23 @@ h4
 
     &__layout
         display: none
-    &-img
+
+    &__layout-img
         display: inline-block
-        padding-right: $padding-xs
+        padding-right: $padding-xxs
+        opacity: 50%
+
+    &__layout-img--active
+        opacity: 100%
+            
     &__sort
         display: inline-block
 
-        &-list
-            display: inline-block
+    &__sort-list
+        display: inline-block
 
-        &-item
-            display: inline-block
+    &-item
+        display: inline-block
 
 @include desktop
     .view
@@ -183,13 +196,9 @@ h4
 
 // Filter
 
-        &__layout-img
-            display: inline-block
-            padding-right: $padding-xxs
-            opacity: 50%
+        
 
-        &__layout-img--active
-            opacity: 100%
+        
 
 // Filter
 

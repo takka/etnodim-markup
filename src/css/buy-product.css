@@ -1,9 +1,50 @@
+@charset "UTF-8";
 .uppercase {
   text-transform: uppercase;
 }
 
-.product-card {
-  padding: 0 10px;
+.breadcrumb {
+  font-family: "Raleway", system-ui;
+  font-weight: 300;
+  font-weight: 600;
+  display: none;
+}
+.breadcrumb__li {
+  display: inline;
+}
+.breadcrumb__li::after {
+  content: "⎯⎯";
+  padding: 0 5px;
+}
+.breadcrumb__li--current {
+  display: inline;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  .breadcrumb {
+    display: block;
+    padding-top: 10px;
+  }
+}
+.product-card__img {
+  padding: 0px;
+}
+.product-card__img--flex-wrap-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.product-card__img--flex-wrap-horizontal1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .product-card .product-card__img--flex-wrap-horizontal1 {
+    flex-wrap: wrap;
+  }
 }
 .product-card__info {
   font-family: "Raleway", system-ui;
