@@ -7,9 +7,16 @@
   gap: 50px;
 }
 
+@media (max-width:1000px) {
+  .card {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width:767px) {
   .card {
     margin-top: 20px;
+    gap: 30px;
   }
 }
 
@@ -29,11 +36,11 @@
   background-size: cover;
 }
 
-.card__img > img{
+.card__item__img > img{
   width: 100%;
 }
 
-.card__description {
+.card__item__description {
   margin-top: 10px;
   font-family: 'Raleway';
   font-style: normal;
@@ -43,7 +50,7 @@
 }
 
 @media (max-width:510px) {
-  .card__description{
+  .card__item__description{
     font-size: 12px;
     -webkit-line-clamp: 2; /* Число отображаемых строк */
     display: -webkit-box; /* Включаем флексбоксы */
@@ -52,7 +59,7 @@
   }
 }
 
-.card__price {
+.card__item__price {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -61,12 +68,14 @@
 }
 
 .page-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   margin: 65px 0 130px;
-  gap: 35%;
-  padding-right: 3%;
+}
+
+@media (max-width:787px) {
+  .page-nav {
+    justify-content: center;
+    margin: 65px 0 80px;
+  }
 }
 
 @media (max-width:460px) {
@@ -81,29 +90,30 @@
   vertical-align: text-bottom;
 }
 
-.page-list {
+.number-page {
+  padding-right: 4%;
+  margin-top: -20px;
+}
+
+.number-list {  
   display: flex;
-  gap: 10px ;
+  float: right;
+  padding-right: 13%;
+  margin-top: -20px;
+  gap: 10px;
+  list-style-type: none;
 }
 
 @media (max-width:460px) {
-  .page-list {
+  .number-list {
     display: none;
   }
 }
 
-.page {
-  padding: 10px;
-}
-
-li {
-  list-style-type: none;
-  /*font-weight: 700;*/
-  /*font-size: 14px*/
-}
-
-.view-more {
+.view-more > a {
   display: flex;
+  justify-content: center;
+  gap: 6px;
   text-transform: uppercase;
   text-decoration: underline;
   font-weight: 600;
@@ -111,4 +121,5 @@ li {
   line-height: 16px;
   align-items: center;
 }
+
 
