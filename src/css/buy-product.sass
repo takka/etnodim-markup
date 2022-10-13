@@ -58,17 +58,19 @@ $red: #DA1F39
         padding-top: $padding-xs
 
 .product-card
-    // padding: 0 $padding-xs
+    padding: 0 $padding-xs
 
     &__img
         padding: 0px
+        overflow: hidden
 
-    // &__img-small
+    &__img-small
+        width: calc(30% - 5px)
         
     &__img--flex-wrap-vertical
         display: flex
         flex-direction: column
-        gap: 40px
+        gap: 10px
             
     &__img--flex-wrap-horizontal1
         display: flex
@@ -76,10 +78,24 @@ $red: #DA1F39
         flex-wrap: nowrap
         gap: 10px
 
-    @include desktop
+    &__img-arrows
+       display: inline
+       text-align: right
+       padding: $padding-m 0
+
+    &__img-arrow
+        display: inline
+
+    &__img-arrow--left
+        transform: rotate(180deg)
+    
+@include desktop
         .product-card
             &__img--flex-wrap-horizontal1
                 flex-wrap: wrap
+            &__img-small
+                width: calc(50% - 5px)
+
 
     &__info
         @include font
@@ -157,6 +173,7 @@ $red: #DA1F39
     .product-card
         display: grid
         grid-template-columns: 1fr 1fr
+    
         &__img
             grid-column: 1/2
         &__info
